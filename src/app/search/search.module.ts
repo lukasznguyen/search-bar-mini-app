@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -11,7 +13,8 @@ import { SearchComponent } from './search.component';
   ],
   imports: [
     CommonModule,
-    SearchRoutingModule
+    SearchRoutingModule,
+    HttpClientModule
   ]
 })
 export class SearchModule { }
