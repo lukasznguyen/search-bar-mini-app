@@ -1,9 +1,9 @@
-<form class="search-form">
+<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="search-form-field" appearance="fill">
         <mat-label>Search</mat-label>
         <input type="text"
             placeholder="Type to search ..."
-            aria-label="Number"
+            aria-label="Type to search ..."
             matInput
             [formControl]="myControl"
             [matAutocomplete]="auto">
@@ -13,4 +13,5 @@
             </mat-option>
         </mat-autocomplete>
     </mat-form-field>
+    <button id="search-button" type="submit">Search</button>
 </form>
