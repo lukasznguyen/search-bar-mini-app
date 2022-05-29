@@ -1,1 +1,16 @@
-<p>search works!</p>
+<form class="search-form">
+    <mat-form-field class="search-form-field" appearance="fill">
+        <mat-label>Search</mat-label>
+        <input type="text"
+            placeholder="Type to search ..."
+            aria-label="Number"
+            matInput
+            [formControl]="myControl"
+            [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions  | async" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
